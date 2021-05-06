@@ -7,9 +7,14 @@ let cartItems: CartItem[] = [
     {id:2, product:"crackers", price: 4, quantity:5},
     {id:3, product:"pretzels", price: 3, quantity:1},
     {id:4, product:"pickles", price: 6, quantity:2},
-    {id:5, product:"blueberries", price: 5, quantity:2}
+    {id:5, product:"blueberries", price: 5, quantity:2},
+    {id:6, product:"strawberries", price: 4, quantity:2},
+    {id:7, product:"fancy pretzels", price: 8, quantity:1},
 ]
-let nextID:number = 6;
+
+let nextID:number = 8;
+
+
 
 routes.get("/cart-items", (req, res) => {
     let maxPrice: number = parseInt(req.query.maxPrice as string);
@@ -78,10 +83,6 @@ routes.get("/cart-items", (req, res) => {
     res.status(204);
     res.send();
   });
-
-
-
-
 
 
 
